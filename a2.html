@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100SMILES Dental Care - Quality Dental Services</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: white;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        
+        header {
+            background-color: #F6BC45;
+            color: black;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo-container {
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        header h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #FFE100;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        
+        main {
+            padding: 2rem 0;
+            min-height: calc(100vh - 160px);
+        }
+        
+        .hero {
+            background-color: white;
+            color: black;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .content-section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #F6BC45;
+        }
+        
+        .content-section p {
+            margin-bottom: 1.5rem;
+        }
+        
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .card {
+            background: #B8EBF5;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: #000000;
+            text-align: center;
+        }
+        
+        .card p {
+            font-size: 0.9rem;
+            color: black;
+        }
+        
+        
+        .tech-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .tech-list li:before {
+            content: "•";
+            color: #F6BC45;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+       
+        .tech-image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        
+        .tech-image {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        
+        .announcement-image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        
+        .announcement-image {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        
+        .contact-info {
+            background: #B8EBF5;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+       
+        footer {
+            background-color: #F6BC45;
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 2rem;
+        }
+        .booking-btn {
+            display: inline-block;
+            background-color: #F6BC45;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .booking-btn:hover {
+            background-color: #e0a93a;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #F6BC45;
+                padding: 1rem 0;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-image, .announcement-image {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .content-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1>100SMILES Dental Care</h1>
+                <p>We are committed to providing better services for your life and your teeth!</p>
+            </div>
+            <nav>
+                <button class="hamburger" id="hamburger">
+                    ☰
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="a2.html">HOME</a></li>
+                    <li><a href="About us.html">ABOUT US</a></li>
+                    <li><a href="book online.html">BOOK ONLINE</a></li>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main>
+        <div class="container">
+            
+            <div id="home-content">
+                <section class="hero">
+                    <h1>Welcome to 100SMILES Dental Care</h1>
+                    <h2>Who are we?</h2>
+                    <p>A modern dental care facility located at 33 Fantail St. in Razole for over three decades, our roots in the community run deep. Our unwavering dedication is to provide the best possible dental care for our patients. With over 50 years of experience in dental care, we pride ourselves on offering friendly, reliable, and compassionate services.</p>
+                    <a href="About us.html" class="booking-btn">MORE INFO ABOUT US</a>
+                    <p></p>
+                    <p>In addition, 100SMILES Dental Care is thrilled to introduce our new online booking system, making
+							appointment scheduling more convenient than ever. Alternatively, feel free to give us a call. Furthermore,
+							we are excited to announce a new callout free trial for Dental-checkup for our valued clients. We aim to
+							enhance your overall experience and provide seamless access to quality dental care.</p>
+					<a href="book online.html" class="booking-btn">BOOK AN APPOINTMENT NOW</a>
+                    
+                </section>
+                
+                <section class="content-section">
+                    <h2>Our New Dental Technologies</h2>
+                    <p>At 100SMILES Dental Care, we are committed to staying at the forefront of dental technology to provide our patients with the best possible care. Here are some of the cutting-edge technologies we have recently integrated into our practice:</p>
+                    
+                    <ul class="tech-list">
+                        <li><strong>Digital X-Rays:</strong> Our state-of-the-art digital X-ray system provides high-resolution images with
+								significantly less radiation exposure compared to traditional X-rays. This technology allows for
+								quicker and more accurate diagnoses, ensuring that we can address dental issues promptly and
+								effectively.</li>
+                        <img src="AdobeStock_454644101.jpeg" alt="Digital X-Ray Technology" class="tech-image">
+                        <li><strong>Intraoral Cameras:</strong> Our intraoral cameras offer a detailed view of your mouth, allowing us to
+								capture high-quality images of your teeth and gums. This technology enhances our ability to
+								detect and diagnose dental problems early, and it also helps us to better explain treatment
+								options to our patients.</li>
+                        <img src="AdobeStock_262111000.jpeg" alt="Intraoral Camera" class="tech-image">
+                        <li><strong>Laser Dentistry:</strong> We have incorporated advanced laser technology into our practice, which allows
+								for minimally invasive procedures with reduced pain and faster healing times. Laser dentistry is
+								used for a variety of treatments, including gum disease therapy, cavity detection, and teeth
+								whitening.</li>
+                        <img src="AdobeStock_297288948.jpeg" alt="Laser Dentistry" class="tech-image">
+                        <li><strong>CAD/CAM Technology:</strong> Our CAD/CAM (Computer-Aided Design and Computer-Aided
+								Manufacturing) system enables us to create precise and custom dental restorations, such as
+								crowns, bridges, and veneers, in a single visit. This technology ensures a perfect fit and natural
+								appearance, providing our patients with durable and aesthetically pleasing results.</li>
+                        <img src="AdobeStock_411728191.jpeg" alt="CAD/CAM Technology" class="tech-image">
+                        <li><strong>3D Printing:</strong> We utilize 3D printing technology to create accurate dental models, surgical guides,
+								and custom appliances. This innovation allows for more precise treatment planning and improved
+								outcomes for our patients.</li>
+                        <img src="AdobeStock_3Dteeth.jpeg" alt="3D Print" class="tech-image">
+                        <li><strong>Teledentistry:</strong> Our teledentistry services provide convenient access to dental care from the
+								comfort of your home. Through virtual consultations, we can assess your dental concerns, provide
+								professional advice, and develop treatment plans without the need for an in-office visit.</li>
+                    </ul>
+                    
+         
+                </section>
+                
+                <section class="content-section">
+                    <h2>Our Staff</h2>
+                    <p>The staff of 100SMILES Dental Care ensure that you experience comfort and enjoyment during your visit through their professional and attentive service, and most importantly---effective treatment.</p>
+                    
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Dr. Johanna Grey (DDS, Orthodontics)</h3>
+                                <img src="Dr. Johanna Grey .png" alt="Dr. Johanna Grey" class="card-img">
+                                <p>Johanna embarked on her dental career after graduating from a distinguished institution. Her focus on orthodontic excellence has shaped her journey, bringing valuable experience to our team at 100SMILES Dental Care. Johanna's dedication to providing top-tier orthodontic care is evident in her daily practice.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Dr. Emily Carter (Pediatric Dentist)</h3>
+                                <img src="Dr. Emily Carter.jpeg" alt="Dr. Emily Carter" class="card-img">
+                                <p>Emily is a dedicated Pediatric Dentist at 100SMILES Dental Care. With a passion for children's dental health, Emily brings a wealth of knowledge and a gentle approach to her practice. Her commitment to providing a positive dental experience for young patients ensures that children receive the best care in a comforting environment.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Dr. Benedict Sloan (DMD)</h3>
+                                <img src="Dr. Benedict Sloan.png" alt="Dr. Benedict Sloan" class="card-img">
+                                <p>Our seasoned dentist Ben, whose commitment to dental health and well-being shines through years of dedicated practice. His journey in dental science has been devoted to ensuring the overall well-being of patients. At 100SMILES Dental Care, Dr. Sloan's unwavering commitment to providing high-quality care stands as a cornerstone of our practice.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Richard Attam (BDS)</h3>
+                                <img src="Richard Attam.jpeg" alt="Richard Attam" class="card-img">
+                                <p>Richard is our skilled Dental Hygienist at 100SMILES Dental Care. With a deep understanding of oral care and a compassionate approach, Richard plays a crucial role in supporting our dentists and ensuring the well-being of your teeth during your visit.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>April Kepner - Receptionist</h3>
+                                <img src="April Kepner.jpg" alt="April Kepner" class="card-img">
+                                <p>April Kepner, our friendly Receptionist at 100SMILES Dental Care. With a warm smile and a passion for customer service, April is here to assist you with appointments, enquiries, and ensure that your experience at our clinic is as seamless and welcoming as possible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="content-section">
+                    <h2>Our Services</h2>
+                    <p>At 100SMILES Dental Care, we understand the diverse needs of our clients, and that's why we offer a comprehensive range of dental services. From routine wellness check-ups and cleanings to dental implants, orthodontics, and cosmetic dentistry, we provide a full spectrum of preventive and restorative care to keep your smile healthy and beautiful.</p>
+                    
+                    <h3>Annual Dental Check-Up Package</h3>
+                    <p>The Annual Dental Check-Up package includes the following services:</p>
+                    
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Physical Examination</h3>
+                                <p>A thorough examination of your overall dental health, including checking for any signs of illness, abnormalities, or discomfort.</p>
+                                <img src="AdobeStock_244031852.jpeg" alt="Physical Examination" class="card-img">
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Cleanings</h3>
+                                <p>Ensuring that your teeth are clean and free from plaque and tartar.</p>
+                                <img src="AdobeStock_311198389.jpeg" alt="Cleanings" class="card-img">
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>X-Rays</h3>
+                                <p>Assessment and preventive measures against common dental issues.</p>
+                                <img src="AdobeStock_334695185.jpeg" alt="X-Rays" class="card-img">
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Dental Check-Up</h3>
+                                <p>Evaluation of your dental health, including checking for signs of dental disease and providing advice on dental care.</p>
+                                <img src="AdobeStock_473854744.jpeg" alt="Dental Check-Up" class="card-img">
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Nutritional Guidance</h3>
+                                <p>Discussion about your diet, nutritional needs, and recommendations for maintaining a healthy smile.</p>
+                                <img src="AdobeStock_372290824.jpeg" alt="Nutritional Guidance" class="card-img">
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Blood Tests or Laboratory Work</h3>
+                                <p>Additional diagnostic tests may be recommended based on your age, dental history, or specific health concerns.</p>
+                                <img src="AdobeStock_370177584.jpeg" alt="Blood Tests" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="content-section">
+                    <h2>The Importance of Annual Dental Check-ups</h2>
+                    <p>Our smiles bring boundless joy, confidence, and well-being into our lives. As responsible individuals, it is our duty to ensure our dental health by prioritising preventive care, and a crucial aspect of this care is the Annual Dental Check-up. This routine examination serves as a cornerstone in maintaining your dental health and happiness.</p>                   
+                    <ul class="tech-list">
+                        <li><strong>Early Detection of Health Issues:</strong> Annual Dental Check-ups provide dentists with the opportunity to detect potential health issues early on. Early detection often leads to more effective treatments and a higher chance of successful outcomes.</li>
+                        <li><strong>Preventive Care:</strong> Regular cleanings and check-ups are a fundamental component of the Annual Dental Check-up. These preventive measures protect you from serious, and sometimes life-threatening, dental diseases.</li>
+                        <li><strong>Tailored Nutritional Guidance:</strong> The Annual Dental Check-up provides an opportunity for dentists to assess your nutritional requirements and offer guidance on a diet that supports your dental health and vitality.</li>
+                        <li><strong>Dental Health Evaluation:</strong> During the check-up, dentists examine the condition of your teeth and gums, addressing any signs of dental disease. Good oral hygiene can prevent a range of health issues and contribute to a longer, healthier life.</li>
+                        <li><strong>Holistic Well-being:</strong> Beyond addressing specific health concerns, Annual Dental Check-ups contribute to the holistic well-being of your dental health.</li>
+                        <li><strong>Addressing Behavioural Changes:</strong> Annual Dental Check-ups offer an opportunity to discuss any behavioural changes with your dentist, allowing for early intervention and tailored solutions.</li>
+                    </ul>                   
+                    <p>To sum up, investing in the Annual Dental Check-up is an investment in your lifelong health and happiness. This proactive approach to dental care not only safeguards against potential health issues but also strengthens the bond between you and your dentist. Schedule your Annual Dental Check-up today and embark on a journey of comprehensive care that ensures a vibrant and fulfilling life for your dental health.</p>
+                </section>              
+                <section class="content-section">
+                    <h2>Announcements</h2>
+                    <ul class="tech-list">
+                        <li><strong>25% discount</strong> on your next dental visit when you book through our online booking form!</li>
+                        <li>Join us for a <strong>free dental checkup</strong> on Saturday 5th July, starting at 9 am*</li>
+                        <li>Until April 30, enjoy a <strong>10% discount</strong> on your Annual Dental Check-Up at 100SMILES Dental Care*</li>
+                    </ul>
+                    <div class="announcement-image-container">
+                        <img src="AdobeStock_537857878.jpeg" alt="Special Offer" class="announcement-image">
+                        <img src="Advert.png" alt="Special Offer" class="announcement-image">
+                        <img src="AdobeStock_71839952.jpeg" alt="Special Offer" class="announcement-image">
+                        <p>Get a Free Dental Checkup at 100SMILES Dental Care*
+							Are you ready to take the first step towards a healthier, brighter smile? 100SMILES Dental Care is excited
+							to offer a FREE dental checkup on Saturday, 5th July starting 9 a.m! This is the perfect opportunity to
+							ensure your dental health is in top shape without any cost.
+							How to Book Your Free Checkup:</p>
+						<p>• Call Us: Contact us at 07 1327 5599 to schedule your appointment.
+							• Email Us: Send an email to admin@100smilesdentalcare.com.au with your preferred time slot.
+							• Visit Us: Drop by our clinic at 195 Fantail Street, Cairnville, Queensland, and our friendlyreceptionist will assist you.</p>
+						<p>What to Expect During Your Free Checkup:</p>
+						<p>• Free Examination: Our experienced dentists will conduct a comprehensive examination of yourteeth and gums to identify any potential issues.
+							• Advance Booking Cleanup: Enjoy a professional cleaning to remove plaque and tartar, leavingyour teeth feeling fresh and clean.
+							• Personalized Advice: Receive personalized advice on maintaining your oral health and preventingfuture dental problems.
+							• Treatment Plan: If any issues are detected, we will provide you with a detailed treatment planand discuss the best options for your dental care.</p>
+						<p>Limited Slots Available!Don't miss out on this fantastic opportunity to get a free dental checkup. Book your appointment today and take the first step towards a healthier smile!
+							We look forward to seeing you on Saturday, 5th July</p>
+						
+                </section>
+                    </div>    
+                    <div class="contact-info">
+                        <h3>Contact Us</h3>
+                        <p><strong>Phone:</strong> 07 5000 5599</p>
+                        <p><strong>Fax:</strong> 07 4567 9999</p>
+                        <p><strong>Address:</strong> 33 Fantail Street, Razole, Queensland</p>
+                        <p><strong>Email:</strong> admin@100smilesdentalcare.com.au</p>                      
+                        <h3>Trading Hours</h3>
+                        <p><strong>Monday - Friday:</strong> 8:30am - 6:30 PM</p>
+                        <p><strong>Saturday - Sunday:</strong> 8:30am - 1pm</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 100SMILES Dental Care. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>     
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
