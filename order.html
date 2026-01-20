@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order & Contact - Flotsam Florist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 07 4779 1243</span>
+                </div>
+                <div class="social-links">
+                    <a href=" "><i class="fab fa-facebook"></i></a >
+                    <a href="#"><i class="fab fa-instagram"></i></a >
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header>
+        <div class="container">
+            <div class="main-header">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>Flotsam Florist</h1>
+                        <p>Family-run florist with 25+ years of experience</p >
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a ></li>
+                            <li><a href="about.html">About Us</a ></li>
+                            <li><a href="products.html">Products & Services</a ></li>
+                            <li><a href="articles.html">Floral Articles</a ></li>
+                            <li><a href="order.html" class="active cta-button">Order Now</a ></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/bouquet2.jpg'); padding: 60px 20px;">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Order Your Flowers</h2>
+                <p>Complete the form below or call us at 07 4779 1243</p >
+            </div>
+        </div>
+    </section>
+
+
+    <main>
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-info">
+                    <h2 class="section-title">Contact Details</h2>
+                    
+                    <div class="contact-detail">
+                        <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+                        <p>23 Love Lane, Illyput, Queensland</p >
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <h3><i class="fas fa-phone"></i> Phone & Fax</h3>
+                        <p><strong>Phone:</strong> 07 4779 1243</p >
+                        <p><strong>Fax:</strong> 07 4779 1244</p >
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <h3><i class="fas fa-envelope"></i> Email</h3>
+                        <p>flotsamflorist@mailserver.com</p >
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday---Friday</td>
+                                <td>9:00 am---4:00 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday---Sunday</td>
+                                <td>9:00 am---12:00 pm</td>
+                            </tr>
+                        </table>
+                        <p style="margin-top: 15px; color: #27ae60; font-weight: bold;">
+                            <i class="fas fa-shipping-fast"></i> Order by 3pm for next-day delivery
+                        </p >
+                    </div>
+                </div>
+
+           
+                <div class="order-form">
+                    <h2 class="section-title">Order Form</h2>
+                    <p style="margin-bottom: 20px;">Fill out the form to order flowers. We'll contact you to confirm.</p >
+                    
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                  
+                        <div class="form-group">
+                            <label for="deliveryAddress">Delivery Address *</label>
+                            <textarea id="deliveryAddress" name="deliveryAddress" rows="2" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="deliveryDate">Delivery Date *</label>
+                            <input type="date" id="deliveryDate" name="deliveryDate" required>
+                        </div>
+                        
+ 
+                        <div class="form-group">
+                            <label>Flower Type *</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="flowerType" value="custom" required checked>
+                                    Custom Bouquet
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="flowerType" value="roses">
+                                    Roses (10% off in May!)
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="flowerType" value="seasonal">
+                                    Seasonal Flowers
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bouquetSize">Size</label>
+                            <select id="bouquetSize" name="bouquetSize">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        
+         
+                        <div class="form-group">
+                            <label for="budget">Budget: $<span id="budgetValue">75</span></label>
+                            <input type="range" id="budget" name="budget" min="50" max="200" value="75" step="25" oninput="updateBudgetValue(this.value)">
+                        </div>
+                        
+             
+                        <div class="form-group">
+                            <label for="occasion">Occasion / Message</label>
+                            <textarea id="occasion" name="occasion" rows="3" placeholder="Birthday, anniversary, or special message"></textarea>
+                        </div>
+ 
+                        <div class="form-group">
+                            <label>Add-ons</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="addCard" name="addCard" checked>
+                                <label for="addCard">Include gift card</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="addVase" name="addVase">
+                                <label for="addVase">Add vase (+$25)</label>
+                            </div>
+                        </div>
+                        
+                       
+                        <button type="submit" class="form-submit">
+                            Submit Order Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+          
+            <div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="text-align: center; color: var(--secondary-color);">How It Works</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div style="text-align: center;">
+                        <div style="background: #27ae60; color: white; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px;">
+                            1
+                        </div>
+                        <p><strong>Submit Form</strong><br>Fill out your order details</p >
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #27ae60; color: white; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px;">
+                            2
+                        </div>
+                        <p><strong>We Contact You</strong><br>We'll call or email within 2 hours</p >
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #27ae60; color: white; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px;">
+                            3
+                        </div>
+                        <p><strong>Confirm & Pay</strong><br>We confirm details and arrange payment</p >
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #27ae60; color: white; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px;">
+                            4
+                        </div>
+                        <p><strong>Delivery</strong><br>Fresh flowers delivered to your door</p >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Flotsam Florist</h3>
+                    <p>Family-run florist with over 25 years of experience.</p >
+                    <p><i class="fas fa-map-marker-alt"></i> 23 Love Lane, Illyput</p >
+                    <p><i class="fas fa-phone"></i> 07 4779 1243</p >
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Mon---Fri</td>
+                            <td>9am---4pm</td>
+                        </tr>
+                        <tr>
+                            <td>Sat---Sun</td>
+                            <td>9am---12pm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a ></li>
+                        <li><a href="about.html">About</a ></li>
+                        <li><a href="order.html">Order</a ></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Flotsam Florist</p >
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const deliveryDate = document.getElementById('deliveryDate');
+            if (deliveryDate) {
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                deliveryDate.min = tomorrow.toISOString().split('T')[0];
+                deliveryDate.value = tomorrow.toISOString().split('T')[0];
+            }
+            
+       
+            const form = document.getElementById('orderForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+              
+                    const required = form.querySelectorAll('[required]');
+                    let valid = true;
+                    
+                    required.forEach(field => {
+                        if (!field.value.trim()) {
+                            valid = false;
+                            field.style.borderColor = '#e74c3c';
+                        } else {
+                            field.style.borderColor = '';
+                        }
+                    });
+                    
+                    if (valid) {
+                        alert('Thank you! We will contact you shortly to confirm your order.');
+                        form.reset();
+                        
+                      
+                        if (deliveryDate) {
+                            const tomorrow = new Date();
+                            tomorrow.setDate(tomorrow.getDate() + 1);
+                            deliveryDate.value = tomorrow.toISOString().split('T')[0];
+                        }
+                        
+                     
+                        updateBudgetValue(75);
+                        document.getElementById('budget').value = 75;
+                    } else {
+                        alert('Please fill in all required fields.');
+                    }
+                });
+            }
+        });
+        
+        function updateBudgetValue(value) {
+            const budgetValue = document.getElementById('budgetValue');
+            if (budgetValue) {
+                budgetValue.textContent = value;
+            }
+        }
+    </script>
+</body>
+</html>

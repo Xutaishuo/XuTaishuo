@@ -1,395 +1,179 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100SMILES Dental Care</title>
-    <style>
-        /* 全局样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: white;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* 导航栏样式 */
-        header {
-            background-color:#F6BC45 ;
-            color: black;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        header h1{
-			color: white;
-            padding: 1rem 0;
-            text-align: center;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-        }
-        header p{
-			color:white;
-			padding: 1rem 0;
-			margin-bottom: 2rem;
-            border-radius: 10px;
-         }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 1.5rem;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-        
-        .nav-links a:hover {
-            color: #FFE100;
-        }
-        
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: black;
-            font-size: 1.5rem;
-        }
-        
-        /* 主要内容区域 */
-        main {
-            padding: 2rem 0;
-            min-height: calc(100vh - 160px);
-        }
-        
-        .hero {
-            background-color: white;
-            color: black;
-            padding: 3rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-            border-radius: 4#FFFFFF#FFFFFF#FFFFFFpx;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-			color: black;
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .hero-img {
-			width:100px
-			height:100px
-        }
-        
-        .content-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
-        
-        .content-section h2 {
-            color: black;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid black;
-        }
-        
-        .content-section p {
-            color: black;
-            margin-bottom: 1.5rem;
-        }	
-        /* 卡片布局 */
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .card {
-            background:#B8EBF5 ;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card p{
-			font-size: 0.8rem;
-            max-width: 700px;
-            color:black;
-            margin: 0 auto 1.5rem;
-        }
-        .card-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        
-        .card-content {
-            padding: 1.5rem;
-        }
-        
-        .card h3 {
-            margin-bottom: 0.5rem;
-            color: #000000;
-            text-align: center;
-        }
-        
-        /* 页脚样式 */
-        footer {
-            background-color:#F6BC45 ;
-            color: white;
-            text-align: center;
-            padding: 2.5rem 0;
-            margin-top: 2rem;
-        }
-        
-  
-        }
-    </style>
+    <title>Flotsam Florist - Premium Flowers in Illyput</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 07 4779 1243</span>
+                    <span><i class="fas fa-envelope"></i> flotsamflorist@mailserver.com</span>
+                </div>
+                <div class="social-links">
+                    <a href=" "><i class="fab fa-facebook"></i></a >
+                    <a href="#"><i class="fab fa-instagram"></i></a >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主头部 -->
     <header>
         <div class="container">
-            <nav>
-               <h1>100SMILES Dental Care</h1>
-               <p>We are committed to providing better services for your life and your teeth!</p>
-                <button class="hamburger" id="hamburger">
-                    
-                </button>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About us.html">ABOUT US</a></li>
-                </ul>
-            </nav>
+            <div class="main-header">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>Flotsam Florist</h1>
+                        <p>Family-run florist with 25+ years of experience</p >
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="active">Home</a ></li>
+                            <li><a href="about.html">About Us</a ></li>
+                            <li><a href="products.html">Products & Services</a ></li>
+                            <li><a href="articles.html">Floral Articles</a ></li>
+                            <li><a href="order.html" class="cta-button">Order Now</a ></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- 主要内容 -->
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">				
+                <h2>Beautiful Flowers for Every Occasion</h2>
+                <p>Family-run local florist in Illyput with over 25 years of experience. Exceptional quality fresh flowers & foliage tailor-made just for you.</p >
+                <a href="order.html" class="cta-button">Order Your Bouquet Today</a >
+            </div>
+        </div>
+    </section>
+
+   
     <main>
         <div class="container">
-            <!-- 首页内容 -->
-            <div id="home-content">
-                <section class="hero">
-                    <h1>-----Who are we?-----</h1>                    
-                    <p>A modern dental care facility located at 33 Fantail St. in Razole for over three decades, our roots in the
-						community run deep. Our unwavering dedication is to provide the best possible dental care for our
-						patients. With over 50 years of experience in dental care, we pride ourselves on offering friendly, reliable,
-						and compassionate services.</p>
-					<p>Click "ABOUT US"to get more information</p>
-                </section>
-                
-                <section class="content-section">
-                    <h2>Our Staff</h2>
-                    <p>The staff of 100SMILES Dental Care ensure that you experience comfort and enjoyment during your visit through their professional and attentive service, and most importantly---effective treatment.</p>
-                    
-                    <div class="card-container">
-                        <div class="card">
-                            <div class="card-content">
-                                <h3>Dr. Johanna Grey (DDS, Orthodontics)</h3>
-                                <img src="Dr. Johanna Grey .png" alt="Dr. Johanna Grey" class="card-img">
-                                <p>Johanna embarked on her dental career after graduating from a
-									distinguished institution. Her focus on orthodontic excellence has shaped her journey, bringing valuable
-									experience to our team at 100SMILES Dental Care. Meredith's dedication to providing top-tier
-									orthodontic care is evident in her daily practice.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card">                            
-                            <div class="card-content">
-                                <h3>Dr. Benedict Sloan (DMD)</h3>
-                                <img src="Dr Benedict Sloan.png" alt="Dr. Benedict Sloan " class="card-img">
-                                <p>Our seasoned dentist Ben, whose commitment to dental health and well-
-									being shines through years of dedicated practice. His journey in dental science has been devoted to
-									ensuring the overall well-being of patients. At 100SMILES Dental Care, Dr. Sloan's unwavering
-									commitment to providing high-quality care stands as a cornerstone of our practice.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card">                            
-                            <div class="card-content">
-                                <h3>Richard Attam (BDS)</h3>    
-                                <img src="Richard Attam.jpeg" alt="Richard Attam" class="card-img">         
-                                <p>Richard is our skilled Dental Hygienist at 100SMILES Dental Care. With a deep
-									understanding of oral care and a compassionate approach, Richard plays a crucial role in supporting our
-									dentists and ensuring the well-being of your teeth during your visit.</p>                                                                                  
-                            </div>
-                            
-						</div>
-						<div class="card-container">
-                        <div class="card">
-                            <div class="card-content">
-                                <h3>April Kepner - Receptionist</h3>
-                                <img src="April Kepner.jpg" alt="April Kepner" class="card-img">
-                                <p>April Kepner, our friendly Receptionist at 100SMILES Dental Care. With a
-									warm smile and a passion for customer service, April is here to assist you with appointments, enquiries,
-									and ensure that your experience at our clinic is as seamless and welcoming as possible.</p>
-                            </div>
+            
+            <section class="featured-section">
+                <h2 class="section-title">Our Featured Arrangements</h2>
+                <div class="featured-products">
+                    <div class="product-card">
+                        <img src="AdobeStock_217902896.jpeg" alt="Spring Bloom Bouquet" class="product-img">
+                        <div class="product-info">
+                            <h3>Spring Bloom Bouquet</h3>
+                            <p>A vibrant mix of seasonal flowers perfect for birthdays and celebrations.</p >
+                            <div class="price">From $65</div>
                         </div>
                     </div>
-                </section>
-                <section class="content-section">
-                    <h2>Our Service</h2>
-                    <p>Annual Dental Check-Up* - the package includes the following services:</p>
-                    
-                    <div class="card-container">
-                        <div class="card">
-                            <div class="card-content">
-                                <h3>Physical Examination</h3>
-                                <img src="AdobeStock_473854744.jpeg" alt="PE" class="card-img">
-                                <p> A thorough examination of your overall dental health, including checking
-										for any signs of illness, abnormalities, or discomfort</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card">                            
-                            <div class="card-content">
-                                <h3>Cleanings</h3>
-                                <img src="AdobeStock_283903376.jpeg" alt="clean " class="card-img">
-                                <p>Ensuring that your teeth are clean and free from plaque and tartar.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card">                            
-                            <div class="card-content">
-                                <h3>X-Rays</h3>    
-                                <img src="AdobeStock_334695185.jpeg" alt="X rays" class="card-img">         
-                                <p>Assessment and preventive measures against common dental issues.</p>      
-                                <img src="AdobeStock_244031852.jpeg" alt="X rays2" class="card-img">  
-                                <p>Use reliable technology and instruments to check your teeth, preventing dental diseases and keeping your teeth healthier.</p>                                                                            
-                            </div>
-						</div>
-						<div class="card-container">
-                        <div class="card">
-                            <div class="card-content">
-                                <h3>Dental Check-Up</h3>
-                                <img src="AdobeStock_71839952.jpeg" alt="Dental Check-Up" class="card-img">
-                                <p>Evaluation of your dental health, including checking for signs of dental disease
-									and providing advice on dental care.</p>
-                            </div>
-                            <div class="card-container">
-                        <div class="card">
-                            <div class="card-content">
-                                <h3>Nutritional Guidance:</h3>
-                                <p>Discussion about your diet, nutritional needs, and recommendations for
-									maintaining a healthy smile.</p>
-                            </div>
-                            <div class="card-container">
-                        <div class="card">
-                            <div class="card-content">
-                                <h3>Blood Tests or Laboratory Work (if necessary)</h3>
-                                <p>Additional diagnostic tests may be recommended
-									based on your age, dental history, or specific health concerns.</p>
-                            </div>
+                    <div class="product-card">
+                        <img src="AdobeStock_199288513.jpeg" alt="Elegant Roses Arrangement" class="product-img">
+                        <div class="product-info">
+                            <h3>Elegant Roses</h3>
+                            <p>Classic rose arrangement available in various colors for romantic occasions.</p >
+                            <div class="price">From $75</div>
                         </div>
                     </div>
-                    </section>
-                <section class="hero">                
-					<h1>The Importance of Annual Dental Check-ups: Investing in Lifelong Dental Health</h1> 
-                    <p>Our smiles bring boundless joy, confidence, and well-being into our lives. As responsible individuals, it is
-							our duty to ensure our dental health by prioritising preventive care, and a crucial aspect of this care is the
-							Annual Dental Check-up. This routine examination serves as a cornerstone in maintaining your dental
-							health and happiness.</p>
-						<p>1. Early Detection of Health Issues: Annual Dental Check-ups provide dentists with the opportunity
-							to detect potential health issues early on. Just as regular doctor visits are vital for humans,
-							routine check-ups for dental health allow dentists to identify and address emerging health
-							concerns before they escalate. Early detection often leads to more effective treatments and a
-							higher chance of successful outcomes.</p>
-					<img src="AdobeStock_298640195.jpeg" alt="teeth2" class="card-img">
-                    <p>2. Preventive Care: Regular cleanings and check-ups are a fundamental component of the Annual
-							Dental Check-up. These preventive measures protect you from serious, and sometimes life-
-							threatening, dental diseases. Additionally, preventive measures such as X-rays and dental check-
-							ups contribute significantly to your overall well-being</p>
-					<p>3. Tailored Nutritional Guidance: Individuals, like humans, have unique dietary needs at different
-							stages of their lives. The Annual Dental Check-up provides an opportunity for dentists to assess
-							your nutritional requirements and offer guidance on a diet that supports your dental health and
-							vitality.</p>
-					<p>4. Dental Health Evaluation: Oral health is often overlooked, yet it plays a crucial role in your
-							overall health. During the check-up, dentists examine the condition of your teeth and gums,
-							addressing any signs of dental disease. Good oral hygiene can prevent a range of health issues
-							and contribute to a longer, healthier life.</p>
-					<p>Holistic Well-being: Beyond addressing specific health concerns, Annual Dental Check-ups
-						contribute to the holistic well-being of your dental health. A dentist's expertise can guide you in
-						providing the best environment, oral hygiene routine, and mental stimulation for your dental
-						health, ensuring overall happiness and quality of life.</p>
-					<p>Addressing Behavioural Changes: Individuals, like humans, can experience changes in behaviour
-							that may indicate underlying health issues. Annual Dental Check-ups offer an opportunity to
-							discuss any behavioural changes with your dentist, allowing for early intervention and tailored
-							solutions.</p>
-					<img src="AdobeStock_261497775.jpeg" alt="teeth1" class="card-img">  
-					<p>To sumup, investing in the Annual Dental Check-up is an investment in your lifelong health and
-							happiness. This proactive approach to dental care not only safeguards against potential health issues but
-							also strengthens the bond between you and your dentist. Schedule your Annual Dental Check-up today
-							and embark on a journey of comprehensive care that ensures a vibrant and fulfilling life for your dental
-							health.</p>
-                </section>
-                </section>
-                <section class="hero">     
-					<h1>!!!Announcements!!!</h1>
-					<p>	 20% discount on your first dental visit when you book through email!</p>
-					<p> Until March 31st , enjoy a 10% discount on your Annual Dental Check-Up at 100SMILES DentalCare*</p>
-					<h1>----------Help you effectively manage oral health!!!----------</h1>      
-					<p>Contact Us</p>      
-                    <p>Phone: 07 5000 5599</p>
-                    <p>Fax: 07 4567 9999</p>
-					<p>Address: 33 Fantail Street, Razole , Queensland.</p>
-					<p>Email: admin@100smilesdentalcare.com.au</p>
-					<p>Trading hours</p>
-					<p>Monday~Friday: 8:30am~6:30 PM</p>
-					<p>Saturday~Sunday: 8:30am~1pm</p>
-                </section>
-            </div>
+                    <div class="product-card">
+						 <img src="AdobeStock_258430254.jpeg" alt="Elegant Roses Arrangement" class="product-img">
+                        <div class="product-info">
+                            <h3>Custom Design</h3>
+                            <p>Tell us your vision and we'll create a unique bouquet tailored to your needs.</p >
+                            <div class="price">From $55</div>
+                            <p><strong>Free gift with every custom bouquet!</strong></p >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+            <section class="announcements">
+                <h2 class="section-title">Special Offers & Announcements</h2>
+                <div class="announcement-item">
+                    <h3>May Special – 10% Off All Roses!</h3>
+                    <p>Get beautiful roses for your loved one at a special discounted price throughout May. Perfect for Mother's Day, anniversaries, or just because!</p >
+                </div>
+                <div class="announcement-item">
+                    <h3>Free Gift With Every Custom Bouquet</h3>
+                    <p>Order any custom bouquet and receive a complimentary gift – choose between a stylish vase or a box of premium chocolates.</p >
+                </div>
+                <div class="announcement-item">
+                    <h3>Next-Day Home Delivery Available</h3>
+                    <p>Order by 3pm for next-day delivery to your home or office. We deliver throughout Illyput and surrounding areas.</p >
+                </div>
+            </section>
+
+           
+            <section class="testimonials-section">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials">
+                    <div class="testimonial-card">						
+                        <p class="testimonial-text">"The best florist in town, so many beautiful flowers to choose from. Their arrangements always exceed my expectations!"</p >
+                        <p class="testimonial-author">---Sarah M.</p >
+                        <img src="AdobeStock_709680320.jpeg" alt="Spring Bloom Bouquet" class="product-img">
+                    </div>
+                    <div class="testimonial-card">						
+                        <p class="testimonial-text">"Excellent service, will be back again. The team helped me choose the perfect flowers for my wife's birthday. She loved them!"</p >
+                        <p class="testimonial-author">--Michael T.</p >
+                        <img src="AdobeStock_482468366.jpeg" alt="Spring Bloom Bouquet" class="product-img">
+                    </div>
+                    <div class="testimonial-card">						
+                        <p class="testimonial-text">"Thank you for the lovely flowers; my wife said they're the most beautiful she's ever seen! The quality is exceptional."</p >
+                        <p class="testimonial-author">---David K.</p >
+                        <img src="AdobeStock_748169031.jpeg" alt="Spring Bloom Bouquet" class="product-img">
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
+   
     <footer>
         <div class="container">
-            <p>&copy; 2025 100SMILES Dental Care copyright.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Flotsam Florist</h3>
+                    <p>Family-run florist with over 25 years of experience. Providing exceptional quality flowers and personalized service to the Illyput community.</p >
+                    <p><i class="fas fa-map-marker-alt"></i> 23 Love Lane, Illyput, QLD</p >
+                    <p><i class="fas fa-phone"></i> 07 4779 1243</p >
+                    <p><i class="fas fa-envelope"></i> flotsamflorist@mailserver.com</p >
+                </div>
+                <div class="footer-section">
+                    <h3>Trading Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Monday---Friday</td>
+                            <td>9:00 am---4:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday---Sunday</td>
+                            <td>9:00 am---12:00 pm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a ></li>
+                        <li><a href="about.html">About Us</a ></li>
+                        <li><a href="products.html">Products & Services</a ></li>
+                        <li><a href="articles.html">Floral Articles</a ></li>
+                        <li><a href="order.html">Order Now</a ></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Flotsam Florist. All rights reserved.</p >
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-  
