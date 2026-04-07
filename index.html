@@ -1,179 +1,416 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flotsam Florist - Premium Flowers in Illyput</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IT Ethical Dilemma: When AI Threatens Your Job | CT & Professional Ethics</title>
+    <!-- Modern, clean sans-serif font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f7fc;
+            color: #1a2c3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        nav {
+            background-color: #0a2540;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0.8rem 24px;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #b0e0ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #e6f7ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #5bc0ff;
+            border-bottom: 2px solid #5bc0ff;
+            padding-bottom: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2c7da0;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #2c7da0;
+            color: #2c7da0;
+        }
+        .btn-outline:hover {
+            background: #2c7da0;
+            color: white;
+        }
+        .btn:hover {
+            background-color: #1f5e7a;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 3rem 0 3rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0a2540;
+            border-left: 6px solid #2c7da0;
+            padding-left: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        th, td {
+            border: 1px solid #dce5ef;
+            padding: 12px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #eef3fa;
+            font-weight: 600;
+        }
+        .highlight {
+            background-color: #f0f9ff;
+            border-left: 4px solid #2c7da0;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 12px;
+        }
+        footer {
+            background-color: #0f2b3d;
+            color: #ccdeee;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+        }
+        .ref-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .ref-list li {
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+            word-break: break-word;
+        }
+        .ai-declare {
+            background: #fef5e7;
+            border: 1px solid #f3d9b0;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-top: 2rem;
+        }
+        /* 图片占位符样式 - 可替换为实际图片 */
+        .image-placeholder {
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            margin: 1.5rem 0;
+            color: #475569;
+            font-weight: 500;
+            text-align: center;
+            padding: 2rem;
+            border: 2px dashed #94a3b8;
+            transition: 0.2s;
+        }
+        .image-placeholder img {
+            max-width: 100%;
+            border-radius: 16px;
+            display: block;
+            object-fit: cover;
+        }
+        .image-placeholder.small {
+            min-height: 120px;
+            padding: 1rem;
+        }
+        .image-placeholder.hero {
+            min-height: 280px;
+            background: linear-gradient(135deg, #0a2540 0%, #2c7da0 100%);
+            color: white;
+            border: none;
+        }
+        .img-caption {
+            font-size: 0.8rem;
+            color: #4a5568;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1.2rem;
+            }
+            .image-placeholder {
+                min-height: 150px;
+            }
+            .image-placeholder.hero {
+                min-height: 200px;
+            }
+        }
+        footer a {
+            color: #9ac7e7;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> 07 4779 1243</span>
-                    <span><i class="fas fa-envelope"></i> flotsamflorist@mailserver.com</span>
-                </div>
-                <div class="social-links">
-                    <a href=" "><i class="fab fa-facebook"></i></a >
-                    <a href="#"><i class="fab fa-instagram"></i></a >
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- 主头部 -->
-    <header>
-        <div class="container">
-            <div class="main-header">
-                <div class="header-content">
-                    <div class="logo">
-                        <h1>Flotsam Florist</h1>
-                        <p>Family-run florist with 25+ years of experience</p >
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="index.html" class="active">Home</a ></li>
-                            <li><a href="about.html">About Us</a ></li>
-                            <li><a href="products.html">Products & Services</a ></li>
-                            <li><a href="articles.html">Floral Articles</a ></li>
-                            <li><a href="order.html" class="cta-button">Order Now</a ></li>
-                        </ul>
-                    </nav>
-                </div>
+<nav>
+    <div class="nav-container">
+        <div class="logo"> AI Ethics Navigator</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dilemma">Ethical Dilemma</a></li>
+            <li><a href="#ct">Computational Thinking</a></li>
+            <li><a href="#ethical">Ethical Implications</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+   
+    <section id="home" style="padding-top: 2.5rem;">
+         
+        <div class="image-placeholder hero" id="hero-image">
+            
+             <img src="P2.AVIF" alt="AI Ethics in IT banner"> 
+        </div>
+        <div class="card" style="background: linear-gradient(135deg, #eef6fc 0%, #ffffff 100%);">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Navigating AI Ethics in IT</h1>
+            <p style="font-size: 1.2rem; color: #2c5a74; margin-bottom: 1rem;">Using Computational Thinking to Deconstruct Ethical Dilemmas & Build a Responsible Digital Future</p>
+            <p>Artificial Intelligence is profoundly transforming the way the information technology industry works. From code generation to system operations, AI brings unprecedented efficiency gains to IT professionals, along with complex ethical challenges. As future IT professionals, we need not only technical skills but also the ability to identify, analyse and resolve ethical dilemmas.</p>
+            <p style="margin-top: 1rem;"><strong Target Audience:</strong> IT students, junior software engineers, system architects, and all technology practitioners who wish to apply ethical principles in their work.<br>
+            <strong> Website Purpose:</strong> Using a realistic ethical dilemma, this site demonstrates how to apply the <strong>eight elements of Computational Thinking</strong> to deconstruct problems, assess impacts on stakeholders, and formulate responsible action plans.</p>
+        </div>
+    </section>
+
+  
+    <section id="dilemma">
+        <h2 class="section-title"> Ethical Dilemma: When AI Threatens Your Job</h2>
+       
+        <div class="image-placeholder small" id="dilemma-image">
+            <img src="P3.jpg" alt="AI replacing human jobs concept"> 
+            
+        </div>
+        <div class="card">
+            <h3>Scenario</h3>
+            <p>You are a software engineer working for a technology company. Your manager asks you to use AI tools to write an automation program that can completely replace the core work currently done by you and your entire department. You follow the instructions, complete and test the program — it works perfectly. However, once deployed, <strong>you and all your colleagues will lose your jobs</strong>. Your manager is satisfied and demands immediate deployment.</p>
+            <div class="highlight">
+                <p><strong>Core conflict:</strong> Obey deployment → colleagues lose jobs, personal conscience is troubled; Refuse deployment → may be accused of insubordination, hindering efficiency, facing disciplinary action. As an IT professional, how do you decide?</p>
+            </div>
+            <p><strong> Relevance to the IT Profession:</strong> With the maturity of AI code generation, automated testing and intelligent operations, "technological unemployment" is no longer science fiction. Do IT professionals have a responsibility to consider the impact on human labour and professional dignity while driving technological efficiency? The Australian Computer Society (ACS) Code of Ethics emphasises "serving the public interest" and "respect for others", providing an ethical compass for this dilemma.</p>
+        </div>
+    </section>
+
+  
+    <section id="ct">
+        <h2 class="section-title"> Deconstructing with Computational Thinking</h2>
+       
+        <div class="image-placeholder" id="ct-image">
+            <img src="P4.jpg" alt="Computational Thinking 8 elements diagram"> 
+            
+        </div>
+        <div class="card">
+            <p>Computational Thinking (CT) is not just a programming tool; it is a framework for systematically breaking down complex problems. The following analysis applies <strong>eight core CT elements</strong> to this dilemma:</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr><th style="width:18%">CT Element</th><th style="width:25%">Meaning</th><th>Application to the Dilemma</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>1. Decomposition</strong></td><td>Break a complex problem into smaller parts</td><td>Break down into: ① technical effectiveness; ② professional responsibility; ③ ethical impact (colleagues/self); ④ legal/contractual aspects. Analyse each sub-problem separately.</td></tr>
+                        <tr><td><strong>2. Pattern Recognition</strong></td><td>Identify trends or commonalities</td><td>Recognise the pattern of "technology replacing labour". The impact of AI is more far-reaching. Draw from precedents in manufacturing, customer service, etc., to find common response strategies.</td></tr>
+                        <tr><td><strong>3. Abstraction</strong></td><td>Focus on core issues, ignore minor details</td><td>Extract the core tension: <strong>Company efficiency/profit vs. employee employment/dignity</strong>. Filter out emotional factors to focus on ethical essence.</td></tr>
+                        <tr><td><strong>4. Algorithm Design</strong></td><td>Design step-by-step solutions</td><td>① Communicate with manager about alternatives; ② Assess redeployment possibilities; ③ Seek ethics committee support; ④ If necessary, refuse deployment. Formulate decision steps.</td></tr>
+                        <tr><td><strong>5. Evaluation</strong></td><td>Evaluate risks and consequences of options</td><td>Comply: short-term peace but long-term job loss & violates ethics; Resist: possible dismissal but upholds integrity; Escalate: may change decision. Assess probability & outcomes.</td></tr>
+                        <tr><td><strong>6. Logical Reasoning</strong></td><td>Derive causal chains</td><td>Deploy program → department redundancy → collective layoffs → colleagues + self lose jobs. Logic shows that obeying does not protect one's own long-term employment but accelerates collective crisis.</td></tr>
+                        <tr><td><strong>7. Debugging</strong></td><td>Identify errors in thinking or action</td><td>Correct the cognitive bias of "I must obey or lose my job immediately". Alternatives exist: escalate, union/colleague dialogue, ethics hotlines. Blind obedience is not the only path.</td></tr>
+                        <tr><td><strong>8. Generalisation</strong></td><td>Apply solution patterns to similar problems</td><td>Develop a reusable pattern for technology vs. human conflict: ① assess human impact; ② multi-level communication; ③ consult professional ethics; ④ refuse if necessary. Applicable to algorithmic bias, data privacy, automation layoffs, etc.</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </header>
+    </section>
+
+    <!-- Ethical Implications Section with image placeholder -->
+    <section id="ethical">
+        <h2 class="section-title"> Ethical Implications: Stakeholder Analysis</h2>
+       
+        <div class="card">
+            <p>Decisions in this dilemma affect multiple groups. Using an ethical lens, the positive and negative consequences are analysed below:</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead><tr><th>Stakeholder</th><th>Positive Impact (if AI deployment proceeds)</th><th>Negative Impact (if AI deployment proceeds)</th></tr></thead>
+                    <tbody>
+                        <tr><td>Company / Shareholders</td><td>Lower labour costs, increased efficiency, short-term profit increase</td><td>Lawsuits, PR crisis, talent drain, long-term innovation loss</td></tr>
+                        <tr><td>Manager / Leadership</td><td>Meets cost-cutting goals, possible promotion</td><td>Loss of team trust, employee resistance, future recruitment difficulties</td></tr>
+                        <tr><td>You (Engineer)</td><td>Short-term recognition from supervisor</td><td>Job loss risk, guilty conscience, broken collegial relationships, psychological burden</td></tr>
+                        <tr><td>Department Colleagues</td><td>Almost none</td><td>Unemployment, financial pressure, career disruption, mental health harm</td></tr>
+                        <tr><td>Clients / Users</td><td>Potentially lower cost or more standardised service</td><td>Loss of human support, AI struggles with complex anomalies, poorer experience</td></tr>
+                        <tr><td>IT Industry (broader)</td><td>Drives automation evolution</td><td>Increased "tech anxiety", reduced job security, labour-management tension</td></tr>
+                        <tr><td>Society at large</td><td>Resource reallocation, productivity gains</td><td>Worsening income inequality, unemployment leading to social issues</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="highlight">
+                <p><strong> Ethical judgment based on ACS & ITPA codes:</strong> The ACS Code of Professional Ethics (ACS, 2023) emphasises "placing the public interest first", "honesty and trustworthiness", and "respect for the rights and dignity of others". Blind deployment that causes colleague unemployment and disregards employee welfare clearly violates these core principles. IT professionals have a responsibility to disclose full impacts and propose alternatives.</p>
+            </div>
+        </div>
+    </section>
 
     
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">				
-                <h2>Beautiful Flowers for Every Occasion</h2>
-                <p>Family-run local florist in Illyput with over 25 years of experience. Exceptional quality fresh flowers & foliage tailor-made just for you.</p >
-                <a href="order.html" class="cta-button">Order Your Bouquet Today</a >
+    <section id="solutions">
+        <h2 class="section-title"> Solutions & Professional Action Framework</h2>
+       
+        <div class="image-placeholder" id="action-image">
+            <img src="P5.png" alt="Ethical action plan roadmap"> 
+            
+        </div>
+        <div class="grid-2">
+            <div class="card">
+                <h3> Immediate Action Plan (Five Steps)</h3>
+                <ol style="margin-left: 1.2rem; line-height: 1.6;">
+                    <li><strong>Halt deployment</strong> – buy time; do not launch immediately.</li>
+                    <li><strong>Gather evidence & impact assessment</strong> – verify whether the program will inevitably replace everyone; check if company has retraining or redeployment plans.</li>
+                    <li><strong>Communicate honestly with your manager</strong> – propose "AI assistance rather than replacement": let the team focus on architecture, complex debugging, AI oversight, etc.</li>
+                    <li><strong>Propose alternative strategies</strong> – redeploy team to areas less easily replaced by AI; advocate for upskilling programs.</li>
+                    <li><strong>Seek internal ethics channels / hotline</strong> – if manager insists, escalate to ethics committee, HR, or use anonymous reporting. As a last resort, refuse to follow unethical orders in line with ACS guidelines.</li>
+                </ol>
+            </div>
+            <div class="card">
+                <h3> Educating Colleagues & Peers</h3>
+                <ul style="margin-left: 1.2rem; line-height: 1.6;">
+                    <li>Organise <strong>workplace ethics workshops</strong> using this case for scenario simulation.</li>
+                    <li>Write an <strong>internal guide</strong>: "When AI threatens jobs: five rights and actions for engineers".</li>
+                    <li>Advocate for a company <strong>AI ethics policy</strong> stating that "AI should augment rather than arbitrarily replace human workers".</li>
+                    <li>Share the case in professional communities (ACS forums, ITPA groups) to foster industry dialogue.</li>
+                </ul>
+            </div>
+        </div>
+        
+            <ul style="margin-left: 1.5rem; line-height: 1.7;">
+                <li><strong>Add "technology impact on people" assessment obligation</strong>: Before deploying AI systems that could lead to large-scale job displacement, conduct an employee impact assessment and provide transition support.</li>
+                <li><strong>Strengthen "retraining and fair transition" responsibility</strong>: Codes should encourage employers to provide upskilling pathways rather than simple layoffs.</li>
+                <li><strong>Explicitly protect professionals who refuse unethical instructions</strong>: Prohibit retaliation against engineers who uphold ethical standards; establish industry ethics protection clauses.</li>
+                <li><strong>Integrate "algorithmic transparency and work dignity" clauses</strong>: When AI decisions affect employment, they must be explainable and respect workers' right to know.</li>
+            </ul>
+            <div class="highlight" style="margin-top: 1rem;">
+                 This case also reveals a gap in many current ethical codes: while they focus on "data privacy and security", they lack systematic guidance on "occupational survival rights versus technological replacement". An improved code should more proactively balance innovation with human welfare.
             </div>
         </div>
     </section>
 
    
-    <main>
-        <div class="container">
-            
-            <section class="featured-section">
-                <h2 class="section-title">Our Featured Arrangements</h2>
-                <div class="featured-products">
-                    <div class="product-card">
-                        <img src="AdobeStock_217902896.jpeg" alt="Spring Bloom Bouquet" class="product-img">
-                        <div class="product-info">
-                            <h3>Spring Bloom Bouquet</h3>
-                            <p>A vibrant mix of seasonal flowers perfect for birthdays and celebrations.</p >
-                            <div class="price">From $65</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="AdobeStock_199288513.jpeg" alt="Elegant Roses Arrangement" class="product-img">
-                        <div class="product-info">
-                            <h3>Elegant Roses</h3>
-                            <p>Classic rose arrangement available in various colors for romantic occasions.</p >
-                            <div class="price">From $75</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-						 <img src="AdobeStock_258430254.jpeg" alt="Elegant Roses Arrangement" class="product-img">
-                        <div class="product-info">
-                            <h3>Custom Design</h3>
-                            <p>Tell us your vision and we'll create a unique bouquet tailored to your needs.</p >
-                            <div class="price">From $55</div>
-                            <p><strong>Free gift with every custom bouquet!</strong></p >
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+    <section id="references">
+        <h2 class="section-title"> References (APA 7th Edition)</h2>
+        
+        <div class="image-placeholder small" id="ref-image">
+            <img src="P8.JPG" alt="Academic references"> 
            
-            <section class="announcements">
-                <h2 class="section-title">Special Offers & Announcements</h2>
-                <div class="announcement-item">
-                    <h3>May Special – 10% Off All Roses!</h3>
-                    <p>Get beautiful roses for your loved one at a special discounted price throughout May. Perfect for Mother's Day, anniversaries, or just because!</p >
-                </div>
-                <div class="announcement-item">
-                    <h3>Free Gift With Every Custom Bouquet</h3>
-                    <p>Order any custom bouquet and receive a complimentary gift – choose between a stylish vase or a box of premium chocolates.</p >
-                </div>
-                <div class="announcement-item">
-                    <h3>Next-Day Home Delivery Available</h3>
-                    <p>Order by 3pm for next-day delivery to your home or office. We deliver throughout Illyput and surrounding areas.</p >
-                </div>
-            </section>
-
-           
-            <section class="testimonials-section">
-                <h2 class="section-title">What Our Customers Say</h2>
-                <div class="testimonials">
-                    <div class="testimonial-card">						
-                        <p class="testimonial-text">"The best florist in town, so many beautiful flowers to choose from. Their arrangements always exceed my expectations!"</p >
-                        <p class="testimonial-author">---Sarah M.</p >
-                        <img src="AdobeStock_709680320.jpeg" alt="Spring Bloom Bouquet" class="product-img">
-                    </div>
-                    <div class="testimonial-card">						
-                        <p class="testimonial-text">"Excellent service, will be back again. The team helped me choose the perfect flowers for my wife's birthday. She loved them!"</p >
-                        <p class="testimonial-author">--Michael T.</p >
-                        <img src="AdobeStock_482468366.jpeg" alt="Spring Bloom Bouquet" class="product-img">
-                    </div>
-                    <div class="testimonial-card">						
-                        <p class="testimonial-text">"Thank you for the lovely flowers; my wife said they're the most beautiful she's ever seen! The quality is exceptional."</p >
-                        <p class="testimonial-author">---David K.</p >
-                        <img src="AdobeStock_748169031.jpeg" alt="Spring Bloom Bouquet" class="product-img">
-                    </div>
-                </div>
-            </section>
         </div>
-    </main>
-
-   
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Flotsam Florist</h3>
-                    <p>Family-run florist with over 25 years of experience. Providing exceptional quality flowers and personalized service to the Illyput community.</p >
-                    <p><i class="fas fa-map-marker-alt"></i> 23 Love Lane, Illyput, QLD</p >
-                    <p><i class="fas fa-phone"></i> 07 4779 1243</p >
-                    <p><i class="fas fa-envelope"></i> flotsamflorist@mailserver.com</p >
-                </div>
-                <div class="footer-section">
-                    <h3>Trading Hours</h3>
-                    <table class="hours-table">
-                        <tr>
-                            <td>Monday---Friday</td>
-                            <td>9:00 am---4:00 pm</td>
-                        </tr>
-                        <tr>
-                            <td>Saturday---Sunday</td>
-                            <td>9:00 am---12:00 pm</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a ></li>
-                        <li><a href="about.html">About Us</a ></li>
-                        <li><a href="products.html">Products & Services</a ></li>
-                        <li><a href="articles.html">Floral Articles</a ></li>
-                        <li><a href="order.html">Order Now</a ></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2026 Flotsam Florist. All rights reserved.</p >
-            </div>
+        <div class="card">
+            <ul class="ref-list">
+                <li>Australian Computer Society. (2023). <em>Code of professional ethics</em>. <a href="https://www.acs.org.au/about/acs-code-of-ethics.html" target="_blank" rel="noopener noreferrer">https://www.acs.org.au/about/acs-code-of-ethics.html</a></li>
+                <li>Borenstein, J., & Howard, A. (2021). Emerging challenges in AI and the future of work: An ethical perspective. <em>IEEE Technology and Society Magazine</em>, 40(1), 51–58. <a href="https://doi.org/10.1109/MTS.2021.3056288" target="_blank">https://doi.org/10.1109/MTS.2021.3056288</a></li>
+                <li>Department of the Prime Minister and Cabinet. (2025). <em>Artificial intelligence (AI) transparency statement</em>. <a href="https://www.pmc.gov.au/about-us/accountability-and-reporting/corporate-reporting/artificial-intelligence-ai-transparency-statement" target="_blank">https://www.pmc.gov.au/about-us/accountability-and-reporting/corporate-reporting/artificial-intelligence-ai-transparency-statement</a></li>
+                <li>Information Technology Professionals Association. (n.d.). <em>Code of ethics</em>. Retrieved April 7, 2026, from <a href="https://www.itpa.org.au/about/code-of-ethics/" target="_blank">https://www.itpa.org.au/about/code-of-ethics/</a></li>
+                <li>Manyika, J., & Sneader, K. (2018). <em>AI, automation, and the future of work: Ten things to solve for</em>. McKinsey Global Institute. <a href="https://www.mckinsey.com/featured-insights/future-of-work/ai-automation-and-the-future-of-work-ten-things-to-solve-for" target="_blank">https://www.mckinsey.com/featured-insights/future-of-work/ai-automation-and-the-future-of-work-ten-things-to-solve-for</a></li>
+                <li>Floridi, L., & Cowls, J. (2022). A unified framework of five principles for AI in society. <em>Harvard Data Science Review</em>, 4(1). <a href="https://doi.org/10.1162/99608f92.8cd550d1" target="_blank">https://doi.org/10.1162/99608f92.8cd550d1</a></li>
+            </ul>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">*All sources are credible and support the discussion of AI ethics, professional codes, and the future of work.</p>
         </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
+    
+</main>
+
+<footer>
+    <div class="container">
+        <p>2026 IT Ethics Education Initiative | Built on ACS & ITPA Codes of Ethics | Purpose: Educating IT professionals on ethical challenges in the AI era</p>
+        <p style="margin-top: 8px;"> Contact: This website is an academic submission; please direct queries to the course coordinator. | APA 7th Edition compliant</p>
+    </div>
+</footer>
+
 </body>
 </html>
+```
